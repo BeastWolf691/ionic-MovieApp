@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
- 
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-
 export class HomePage {
   selectedImage: string = '../../assets/images/halo.png';
-  backgroundColor: string = 'white';
+  backgroundImage: string = '../../../assets/images/halo.png'; // Image de fond par défaut
 
   constructor(private navCtrl: NavController) {}
 
@@ -17,14 +16,9 @@ export class HomePage {
     this.navCtrl.navigateForward(`${path}`);
   }
 
-  changeBackgroundColor(color: string) {
-    this.backgroundColor = color;
-  }
-
   changFond(image: string) {
     console.log(image);
     this.selectedImage = image;
-    this.changeBackgroundColor('blue');
+    this.backgroundImage = image; // Changer l'image de fond
   }
 }
-

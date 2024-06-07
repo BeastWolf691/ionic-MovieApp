@@ -1,13 +1,10 @@
-<ion-content>
+<ion-content [ngStyle]="{'background-image': 'url(' + backgroundImage + ')'}">
   <div class="filter"></div>
   <header>
-   
     <ion-icon name="game-controller-outline"></ion-icon>
-    <ion-searchbar placeholder="Recherche" search-icon="none" ></ion-searchbar>
-   
+    <ion-searchbar placeholder="Recherche" search-icon="none"></ion-searchbar>
   </header>
-  <ion-img src="../../../assets/images/halo.png" />
- 
+  <ion-img [src]="selectedImage"></ion-img>
   <div class="container">
     <p>
       <ion-text>HALO</ion-text><br>
@@ -15,19 +12,15 @@
       <ion-icon name="star"></ion-icon>
       <ion-icon name="star"></ion-icon>
       <ion-icon name="star"></ion-icon>
-      <ion-icon name="star-half-outline"></ion-icon><br>4;5/5
-     
+      <ion-icon name="star"></ion-icon><br>4.1/5
     </p>
-    <p class="paragraphe">Lorem ipsum dolor sit amet consectetur adipisicing
-      elit. Amet, delectus sit atque adipisci laboriosam temporib
-      us ex debitis dolor sint aperiam, aut dicta consequuntur d
-      eleniti perferendis veritatis dolore! V
-      itae, beatae libero.
+    <p class="paragraphe">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, delectus sit atque adipisci laboriosam temporibus ex debitis dolor sint aperiam, aut dicta consequuntur deleniti perferendis veritatis dolore! Vitae, beatae libero.
     </p>
   </div>
 </ion-content>
-  <ion-footer>
-   <!--  <div class="content" >
+  <!-- <ion-footer>
+    <div class="content" >
       <ion-img  src="../../assets/Flamethrower_Fight_GOLD_RGB2b37943f-d26b-4e68-91c5-d381e974fb15_ORIGINAL.jpg" />
       <span>Title</span>
     </div>
@@ -50,9 +43,23 @@
     <div class="content" >
       <ion-img src="title" />
       <span>Title</span>
-    </div> -->
+    </div>
     <app-cards [title]="'Moon Knight'" [image]="'../../../assets/images/image1.jpg'" (click)="navigate('after')"></app-cards>
     <app-cards [title]="'Obi wan Kenobi'" [image]="'../../../assets/images/image2.jpg'" (click)="navigate('after')"></app-cards>
     <app-cards [title]="'Moon Knight'" [image]="'../../../assets/images/image1.jpg'" (click)="navigate('after')"></app-cards>
     <app-cards [title]="'Obi wan Kenobi'" [image]="'../../../assets/images/image2.jpg'" (click)="navigate('after')"></app-cards>
+  </ion-footer> -->
+
+  
+  <ion-footer>
+    <ion-toolbar>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6" *ngFor="let img of ['../../../assets/images/image1.jpg', '../../../assets/images/image2.jpg']">
+            <ion-img [src]="img" (click)="changFond(img)"></ion-img>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-toolbar>
   </ion-footer>
+  
