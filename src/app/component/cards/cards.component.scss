@@ -1,0 +1,24 @@
+.content {
+    width: 45vw;
+    height: 100%;
+    color: white;
+    position: relative;
+    background-color: rgba(16, 214, 16, 0.733);
+   
+    img {
+      height: 20vh;
+      width: 45vw;
+      object-fit: cover;
+    }
+   
+    span {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      height: 25px;
+      padding: 2px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+    }
+  }

@@ -1,37 +1,58 @@
 <ion-content>
-  <ion-header>
-    <ion-toolbar>
-      <ion-icon name="film-outline" slot="start"></ion-icon>
-      <ion-searchbar placeholder="" search-icon="none" slot="end"/>
-    </ion-toolbar>
-  </ion-header>
-  <div class="main-film">
-    <div class="infos">
-      <h1>Halo</h1>
-      <div class="stars">
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star"></ion-icon>
-        <ion-icon name="star-half-outline"></ion-icon>
-      </div>
-      <h2>4.1/5</h2>
-    </div>
-    <div class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-      been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-      scrambled it to make a type specimen book.
-    </div>
-  </div>
-
-  <div class="reco">
-    <h3>Vous aimerez peut être</h3>
-    <div class="cards">
-      <app-custom-card [title]="'Test 1'" src="../../assets/images/background.png" (imageClicked)="changeBackground($event)"/>
-      <app-custom-card [title]="'Test 2'" src="../../assets/images/background2.png" (imageClicked)="changeBackground($event)"/>
-      <app-custom-card [title]="'Test 3'" src="../../assets/images/background3.png" (imageClicked)="changeBackground($event)"/>
-      <app-custom-card [title]="'Test 4'" src="../../assets/images/background4.png" (imageClicked)="changeBackground($event)"/>
-      <app-custom-card [title]="'Test 5'" src="../../assets/images/background5.png" (imageClicked)="changeBackground($event)"/>
-      <app-custom-card [title]="'Test 6'" src="../../assets/images/background6.png" (imageClicked)="changeBackground($event)"/>
-    </div>
+  <div class="filter"></div>
+  <header>
+   
+    <ion-icon name="game-controller-outline"></ion-icon>
+    <ion-searchbar placeholder="Recherche" search-icon="none" ></ion-searchbar>
+   
+  </header>
+  <ion-img src="../../../assets/images/halo.png" />
+ 
+  <div class="container">
+    <p>
+      <ion-text>HALO</ion-text><br>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star-half-outline"></ion-icon><br>4;5/5
+     
+    </p>
+    <p class="paragraphe">Lorem ipsum dolor sit amet consectetur adipisicing
+      elit. Amet, delectus sit atque adipisci laboriosam temporib
+      us ex debitis dolor sint aperiam, aut dicta consequuntur d
+      eleniti perferendis veritatis dolore! V
+      itae, beatae libero.
+    </p>
   </div>
 </ion-content>
+  <ion-footer>
+   <!--  <div class="content" >
+      <ion-img  src="../../assets/Flamethrower_Fight_GOLD_RGB2b37943f-d26b-4e68-91c5-d381e974fb15_ORIGINAL.jpg" />
+      <span>Title</span>
+    </div>
+    <div class="content" >
+      <ion-img  src="../../assets/Flamethrower_Fight_GOLD_RGB2b37943f-d26b-4e68-91c5-d381e974fb15_ORIGINAL.jpg" />
+      <span>Title</span>
+    </div> <div class="content" >
+      <ion-img  src="../../assets/Flamethrower_Fight_GOLD_RGB2b37943f-d26b-4e68-91c5-d381e974fb15_ORIGINAL.jpg" />
+      <span>Title</span>
+    </div> <div class="content" >
+      <ion-img  src="../../assets/Flamethrower_Fight_GOLD_RGB2b37943f-d26b-4e68-91c5-d381e974fb15_ORIGINAL.jpg" />
+      <span>Title</span>
+    </div> <div class="content" >
+      <ion-img  src="../../assets/Flamethrower_Fight_GOLD_RGB2b37943f-d26b-4e68-91c5-d381e974fb15_ORIGINAL.jpg" />
+      <span>Title</span>
+    </div> <div class="content" >
+      <ion-img  src="../../assets/Flamethrower_Fight_GOLD_RGB2b37943f-d26b-4e68-91c5-d381e974fb15_ORIGINAL.jpg" />
+      <span>Title</span>
+    </div>
+    <div class="content" >
+      <ion-img src="title" />
+      <span>Title</span>
+    </div> -->
+    <app-cards [title]="'Moon Knight'" [image]="'../../../assets/images/image1.jpg'" (click)="navigate('after')"></app-cards>
+    <app-cards [title]="'Obi wan Kenobi'" [image]="'../../../assets/images/image2.jpg'" (click)="navigate('after')"></app-cards>
+    <app-cards [title]="'Moon Knight'" [image]="'../../../assets/images/image1.jpg'" (click)="navigate('after')"></app-cards>
+    <app-cards [title]="'Obi wan Kenobi'" [image]="'../../../assets/images/image2.jpg'" (click)="navigate('after')"></app-cards>
+  </ion-footer>
